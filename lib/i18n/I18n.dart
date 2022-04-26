@@ -1,4 +1,7 @@
-// DO NOT EDIT. This is code generated via package i18n_builder 
+// DO NOT EDIT. This is code generated via  
+// i18n_builder By 张风捷特烈 
+// github: https://github.com/toly1994328/i18n_builder
+
 import 'package:flutter/material.dart';
 
 import 'data/zh_CH.dart';
@@ -17,7 +20,7 @@ class I18n {
   }
 
   get title => _localizedValues[locale.toString()]!['title'];
-get info => _localizedValues[locale.toString()]!['info'];
-get increment => _localizedValues[locale.toString()]!['increment'];
+  get info => _localizedValues[locale.toString()]!['info'];
+  get info2 => _localizedValues[locale.toString()]!['info2'];
+  get increment => _localizedValues[locale.toString()]!['increment'];
 }
-    

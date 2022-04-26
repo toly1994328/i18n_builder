@@ -38,8 +38,10 @@ class Builder {
     String supportedLocales = result.locals.join(',\n');
 
     String delegate = """
-// DO NOT EDIT. This is code generated via i18n_builder 
+// DO NOT EDIT. This is code generated via  
 // i18n_builder By 张风捷特烈 
+// github: https://github.com/toly1994328/i18n_builder
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +51,7 @@ class ${caller}Delegate extends LocalizationsDelegate<$caller> {
   ${caller}Delegate._();
 
   final List<Locale> supportedLocales = const [
-    $supportedLocales
+$supportedLocales
   ];
 
   @override
@@ -81,7 +83,10 @@ class ${caller}Delegate extends LocalizationsDelegate<$caller> {
     });
 
     String callerContent = """
-// DO NOT EDIT. This is code generated via package i18n_builder 
+// DO NOT EDIT. This is code generated via  
+// i18n_builder By 张风捷特烈 
+// github: https://github.com/toly1994328/i18n_builder
+
 import 'package:flutter/material.dart';
 
 $import
@@ -97,9 +102,9 @@ class ${caller} {
     return Localizations.of(context, ${caller});
   }
 
-  $attrs
+$attrs
 }
-    """;
+""";
     File callerFile = File(path.join(dir, 'i18n','$caller.dart'));
     await callerFile.writeAsString(callerContent);
   }
@@ -116,6 +121,10 @@ class ${caller} {
         File callerFile = File(path.join(dir, 'i18n','data','$name.dart'));
         await callerFile.writeAsString(
 """
+// DO NOT EDIT. This is code generated via  
+// i18n_builder By 张风捷特烈 
+// github: https://github.com/toly1994328/i18n_builder
+
 const Map<String, String> $name =  $jsonContent;
 """);
       }

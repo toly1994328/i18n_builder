@@ -1,4 +1,7 @@
-// DO NOT EDIT. This is code generated via package i18n_builder 
+// DO NOT EDIT. This is code generated via  
+// i18n_builder By 张风捷特烈 
+// github: https://github.com/toly1994328/i18n_builder
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +12,7 @@ class I18nDelegate extends LocalizationsDelegate<I18n> {
 
   final List<Locale> supportedLocales = const [
     Locale('zh','CH'),
-Locale('en','US')
+    Locale('en','US')
   ];
 
   @override

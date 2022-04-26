@@ -8,7 +8,7 @@ class LocalInfo {
 
   @override
   String toString() {
-    return "Locale('$languageCode','${countryCode??''}')";
+    return "    Locale('$languageCode','${countryCode??''}')";
   }
 }
 
@@ -19,7 +19,7 @@ class AttrInfo {
 
   @override
   String toString() {
-    return "get $name => _localizedValues[locale.toString()]!['$name'];";
+    return "  get $name => _localizedValues[locale.toString()]!['$name'];";
   }
 }
 

@@ -1,5 +1,6 @@
 {
   "title":"Flutter Demo Home Page",
   "info":"You have pushed the button this many times:",
+  "info2":"{user} have pushed the button this {count} times:",
   "increment":"Increment:"
 }
