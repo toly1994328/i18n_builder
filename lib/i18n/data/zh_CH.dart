@@ -5,6 +5,6 @@
 const Map<String, String> zh_CH =  {
   "title":"Flutter 案例主页",
   "info":"你已点击了多少次按钮: ",
-  "info2":"{user}已点击了{count}次按钮: ",
+  "info2":"{user=捷特}已点击了{count}次按钮: ",
   "increment":"增加"
 };

@@ -92,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              I18n.of(context).info2(count: '$_counter'),
+            ),
           ],
         ),
       ),

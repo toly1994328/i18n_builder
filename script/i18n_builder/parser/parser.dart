@@ -48,6 +48,25 @@ class Parser {
 
   // 解析属性
   AttrInfo _parserAttr(String key, String value){
-   return AttrInfo(name: key);
+    RegExp regExp = RegExp(r'{(?<tag>.*?)}');
+    List<Arg> args = [];
+    List<RegExpMatch> allMatches = regExp.allMatches(value).toList();
+    allMatches.forEach((RegExpMatch match) {
+      String? arg = match.namedGroup('tag');
+      if(arg!=null){
+        String? value;
+        String a = arg;
+        if(arg.contains('=')){
+          value = arg.split('=')[1].trim();
+          a = arg.split('=')[0].trim();
+        }
+        args.add(Arg(
+          arg: a,
+          value: value,
+          full: arg
+        ));
+      }
+    });
+    return AttrInfo(name: key,args: args);
   }
 }

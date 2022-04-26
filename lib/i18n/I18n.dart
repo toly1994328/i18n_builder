@@ -19,8 +19,26 @@ class I18n {
     return Localizations.of(context, I18n);
   }
 
-  get title => _localizedValues[locale.toString()]!['title'];
-  get info => _localizedValues[locale.toString()]!['info'];
-  get info2 => _localizedValues[locale.toString()]!['info2'];
-  get increment => _localizedValues[locale.toString()]!['increment'];
+  String get title => _localizedValues[locale.toString()]!['title']!;
+  String get info => _localizedValues[locale.toString()]!['info']!;
+  String info2({
+  String? user,
+  required String count,
+
+  }) {
+  String value = _localizedValues[locale.toString()]!['info2']!;
+    String? defaultValue;
+    RegExp reg = RegExp(r'{user=(?<value>.*?)}');
+    if(user==null){
+      defaultValue = reg.firstMatch(value)?.namedGroup('value');
+    }else{
+      defaultValue = user;
+    }
+    value = value.replaceAll(reg, defaultValue ?? '');
+            value =  value.replaceAll('{count}', count);
+
+  return value;
+}
+      
+  String get increment => _localizedValues[locale.toString()]!['increment']!;
 }
