@@ -42,8 +42,6 @@ class AttrInfo {
         }else{
           prams += '  String? $arg,\n';
           // value = value.replaceAll('{${a.full}}', '$arg??"${a.value};\n');
-
-
           value += """
     String? defaultValue;
     RegExp reg = RegExp(r'{$arg=(?<value>.*)?}');

@@ -28,7 +28,7 @@ class I18n {
   }) {
   String value = _localizedValues[locale.toString()]!['info2']!;
     String? defaultValue;
-    RegExp reg = RegExp(r'{user=(?<value>.*?)}');
+    RegExp reg = RegExp(r'{user=(?<value>.*)?}');
     if(user==null){
       defaultValue = reg.firstMatch(value)?.namedGroup('value');
     }else{

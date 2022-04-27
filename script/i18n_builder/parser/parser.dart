@@ -58,7 +58,7 @@ class Parser {
         String a = arg;
         if(arg.contains('=')){
           value = arg.split('=')[1].trim();
-          a = arg.split('=')[0].trim();
+          a = arg.split('=')[0];
         }
         args.add(Arg(
           arg: a,
