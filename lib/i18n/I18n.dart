@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'data/zh_CH.dart';
+import 'data/zh_CN.dart';
 import 'data/en_US.dart';
 
 class I18n {
@@ -12,7 +12,7 @@ class I18n {
   I18n(this.locale);
 
   static const Map<String, Map<String,String>> _localizedValues = {
-    'zh_CH': zh_CH,'en_US': en_US,
+    'zh_CN': zh_CN,'en_US': en_US,
   };
 
   static I18n of(BuildContext context) {
@@ -28,7 +28,7 @@ class I18n {
   }) {
   String value = _localizedValues[locale.toString()]!['info2']!;
     String? defaultValue;
-    RegExp reg = RegExp(r'{user=(?<value>.*)?}');
+    RegExp reg = RegExp(r'{user=(?<value>.*?)}');
     if(user==null){
       defaultValue = reg.firstMatch(value)?.namedGroup('value');
     }else{

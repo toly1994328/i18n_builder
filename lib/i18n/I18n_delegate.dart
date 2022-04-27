@@ -11,7 +11,7 @@ class I18nDelegate extends LocalizationsDelegate<I18n> {
   I18nDelegate._();
 
   final List<Locale> supportedLocales = const [
-    Locale('zh','CH'),
+    Locale('zh','CN'),
     Locale('en','US')
   ];
 

@@ -33,7 +33,7 @@ class AttrInfo {
       return "  String get $name => _localizedValues[locale.toString()]!['$name']!;";
     } else {
       String prams = '';
-      String value = '';
+      String value = ''; //\{user=(?<value>.*?)\}
       args.forEach((Arg a) {
         String arg = a.arg;
         if(a.value==null){
@@ -44,7 +44,7 @@ class AttrInfo {
           // value = value.replaceAll('{${a.full}}', '$arg??"${a.value};\n');
           value += """
     String? defaultValue;
-    RegExp reg = RegExp(r'{$arg=(?<value>.*)?}');
+    RegExp reg = RegExp(r'{$arg=(?<value>.*?)}');
     if($arg==null){
       defaultValue = reg.firstMatch(value)?.namedGroup('value');
     }else{

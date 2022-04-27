@@ -18,10 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final List<Locale> locals = const [
-    Locale('zh', 'CH'),
-    Locale('en', 'US'),
-  ];
+  final List<Locale> locals = I18nDelegate.delegate.supportedLocales;
 
   int _index = 0;
 
