@@ -54,6 +54,7 @@ S.of(context).XXX
 ![](https://gitee.com/toly1994/res/raw/master/image-20220427074934705.png)
 
 ```dart
+---->[使用方式]----
 I18n.of(context).info2(count: '$_counter')
 I18n.of(context).info2(count: '$_counter',user: 'toly')
 ```
