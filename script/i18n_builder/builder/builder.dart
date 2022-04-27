@@ -25,6 +25,7 @@ class Builder {
 
   Future<void> _ensureDirExist() async {
     Directory directory = Directory(path.join(dir, 'i18n'));
+    await directory.delete(recursive: true);
     if (!directory.existsSync()) {
       directory.createSync(recursive: true);
     }

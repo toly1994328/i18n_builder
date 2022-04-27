@@ -37,6 +37,7 @@ main(List<String> args) async {
       }
     });
   }
+
   ParserResult result = await parser.parserData(scriptPath);
   Builder builder = Builder(
     dir: path.join(scriptPath, distDir),
